@@ -6,7 +6,18 @@
     </head>
     <body>
         <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-        <script>eruda.init();</script>
+        <script>
+            eruda.init({
+                tool: ['console'],
+                useShadowDom: true,
+                autoScale: true,
+                defaults: {
+                    displaySize: 50,
+                    transparency: 0.9,
+                    theme: 'Monokai Pro'
+                }
+            });
+        </script>
         <div>
             <span id="fps"></span>
         </div>
