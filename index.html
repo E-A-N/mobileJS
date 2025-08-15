@@ -5,8 +5,13 @@
         <title>Mobile JS</title>
     </head>
     <body>
+        <div id="msg"></div>
         <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
         <script>
+            let encourgement = "Good luck kids!";
+            let updateEncouragement = () => {
+                document.getElementById("msg").innerText = encourgement;
+            }
             eruda.init({
                 tool: ['console'],
                 useShadowDom: true,
@@ -16,7 +21,8 @@
                     theme: 'Monokai Pro'
                 }
             });
-            eruda.scale(3)
+            eruda.scale(3);
+            updateEncouragement();
         </script>
         <div>
             <span id="fps"></span>
